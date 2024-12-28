@@ -1,6 +1,6 @@
 plugins {
     id("io.micronaut.build.internal.sourcegen-module")
-    id("org.jetbrains.kotlin.jvm")
+    alias(mn.plugins.kotlin.jvm)
 }
 
 dependencies {

@@ -207,7 +207,7 @@ class KotlinPoetSourceGenerator : SourceGenerator {
         }
         if (notNullProperties.isNotEmpty()) {
             classBuilder.primaryConstructor(
-                FunSpec.constructorBuilder().addModifiers(KModifier.PUBLIC).addParameters(
+                FunSpec.constructorBuilder().addParameters(
                     notNullProperties.stream()
                         .map { prop: PropertyDef ->
                             ParameterSpec.builder(
@@ -292,7 +292,7 @@ class KotlinPoetSourceGenerator : SourceGenerator {
         }
         if (constructorProperties.isNotEmpty()) {
             classBuilder.primaryConstructor(
-                FunSpec.constructorBuilder().addModifiers(KModifier.PUBLIC).addParameters(
+                FunSpec.constructorBuilder().addParameters(
                     constructorProperties.stream()
                         .map { prop: PropertyDef ->
                             ParameterSpec.builder(

@@ -12,5 +12,5 @@ tasks.withType(Checkstyle).configureEach {
 }
 
 if (System.getenv("SONAR_TOKEN") != null) {
-    tasks.configureEach { if (it.name == "testCodeCoverageReport") { enabled = false } }
+    tasks.named("testCodeCoverageReport") { enabled = false }
 }

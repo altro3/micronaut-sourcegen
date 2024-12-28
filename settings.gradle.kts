@@ -5,6 +5,8 @@ pluginManagement {
     }
 }
 
+includeBuild("build-logic")
+
 plugins {
     id("io.micronaut.build.shared.settings") version "7.0.1"
 }
@@ -25,6 +27,7 @@ include("test-suite-custom-annotations")
 include("test-suite-custom-generators")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
 configure<io.micronaut.build.MicronautBuildSettingsExtension> {
     importMicronautCatalog()
